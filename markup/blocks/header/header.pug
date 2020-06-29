@@ -1,3 +1,17 @@
+include ../nav/nav
+include ../search/search
+
 mixin header(data)
-  header.header
-    .header__container.container
+  header.header&attributes(attributes)
+    .header__container.container.flex
+      a.logo.header__logo(href="#")
+        picture.logo__image
+          source(type='image/webp' media='(min-width:300px)' data-srcset='assets/images/general/logo@2x.webp 2x, assets/images/general/logo.webp 1x')
+          source(type='image/png' media='(min-width:300px)' data-srcset='assets/images/general/logo@2x.png 2x, assets/images/general/logo.png 1x')
+
+          img.lazy(data-src="assets/images/general/logo@2x.png", alt="logo Expocon")
+
+      +nav().header__nav
+      +search-link().header__search
+
+

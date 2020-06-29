@@ -1,0 +1,46 @@
+mixin slider(data)
+  section.slider
+    .slider__container.container
+      .slider__items
+        .slider__item.slider__item_1.lazy(data-bg='url(assets/images/content/slider-img-1.png)')
+          .slider__entry
+            h2.slider__title.title.title_biggest Готовим и сертифицируем по всем стандартам PCI
+            ul.slider__list.slider__list_half.flex
+              li.slider__list-item
+                != pugHelpers.Icon.call(locals, {iconName: 'slider-1-icon-1', className: 'slider__list-icon'})
+                | PCI DSS
+              li.slider__list-item
+                != pugHelpers.Icon.call(locals, {iconName: 'slider-1-icon-2', className: 'slider__list-icon'})
+                | PCI 3DS Security Requirement
+              li.slider__list-item.slider__list-item_3
+                .slider__list-icon
+                | PCI Card Production
+              li.slider__list-item
+                != pugHelpers.Icon.call(locals, {iconName: 'slider-1-icon-4', className: 'slider__list-icon'})
+                | SSF (PA-DSS)
+              li.slider__list-item
+                != pugHelpers.Icon.call(locals, {iconName: 'slider-1-icon-5', className: 'slider__list-icon'})
+                | PCI PIN Security
+
+            a.slider__button.button(href="#") Узнать больше
+
+        .slider__item.slider__item_2.lazy(data-bg='url(assets/images/content/slider-img-2.png)')
+          .slider__entry
+            h2.slider__title.title.title_biggest Тестирование на проникновение
+            .slider__text Реальный способ проверить безопасность вашей инфраструктуры
+            a.slider__button.button(href="#") Узнать больше
+
+        .slider__item.slider__item_3.lazy(data-bg='url(assets/images/content/slider-img-3.png)')
+          .slider__entry
+            ul.slider__list
+              li.slider__list-item
+                != pugHelpers.Icon.call(locals, {iconName: 'slider-3-icon-1', className: 'slider__list-icon'})
+                | Соответствие требованиям Российских стандартов и ЦБ РФ
+              li.slider__list-item
+                != pugHelpers.Icon.call(locals, {iconName: 'slider-3-icon-2', className: 'slider__list-icon'})
+                | Три сертифицированных аудитора по теме соответствия ГОСТ Р 57580
+              li.slider__list-item
+                != pugHelpers.Icon.call(locals, {iconName: 'slider-3-icon-3', className: 'slider__list-icon'})
+                | Более 30 выполненных проектов по аудиту соответствия Положению 382-П за последние 6 месяцев
+
+            a.slider__button.button(href="#") Узнать больше

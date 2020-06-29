@@ -1,0 +1,71 @@
+mixin services(data)
+  section.services
+    .services__container.container
+      h2.services__title.title.title_regular Наши услуги
+      .services__section.services__section_first
+        h3.services__section-title.title.title_big Консалтинг и сертификация
+        ul.services__list.flex
+          li.services__item
+            a.services__link(href="#")
+              .services__icon-w
+                != pugHelpers.Icon.call(locals, {iconName: 'service-1', className: 'services__icon'})
+              span.services__text Аудиты соответствия требованиям семейства стандартов Платежной индустрии (PCI)
+          li.services__item
+            a.services__link(href="#")
+              .services__icon-w
+                != pugHelpers.Icon.call(locals, {iconName: 'service-2', className: 'services__icon'})
+              span.services__text Оценка соответствия СУИБ требованиям ISO 27001
+          li.services__item.services__item_3
+            a.services__link(href="#")
+              .services__icon-w
+                span.services__icon
+              span.services__text Оценка соответствия требованиям SWIFT CSP
+          li.services__item
+            a.services__link(href="#")
+              .services__icon-w
+                != pugHelpers.Icon.call(locals, {iconName: 'service-4', className: 'services__icon'})
+              span.services__text Приведение в соответствие требованиям Банка России
+          li.services__item
+            a.services__link(href="#")
+              .services__icon-w
+                != pugHelpers.Icon.call(locals, {iconName: 'service-5', className: 'services__icon'})
+              span.services__text Комплексная защиты персональных данных
+
+      .services__section.services__section_second
+        h3.services__section-title.title.title_big Анализ защищенности
+        ul.services__list.flex
+          li.services__item
+            a.services__link(href="#")
+              .services__icon-w
+                != pugHelpers.Icon.call(locals, {iconName: 'service-2-1', className: 'services__icon'})
+              span.services__text Тестирование  WEB-сервисов
+          li.services__item
+            a.services__link(href="#")
+              .services__icon-w
+                != pugHelpers.Icon.call(locals, {iconName: 'service-2-2', className: 'services__icon'})
+              span.services__text Тестирование систем ДБО
+          li.services__item
+            a.services__link(href="#")
+              .services__icon-w
+                != pugHelpers.Icon.call(locals, {iconName: 'service-2-3', className: 'services__icon'})
+              span.services__text Black-box Тестирование на проникновение
+          li.services__item
+            a.services__link(href="#")
+              .services__icon-w
+                != pugHelpers.Icon.call(locals, {iconName: 'service-2-4', className: 'services__icon'})
+              span.services__text Безопасность мобильных приложений
+          li.services__item
+            a.services__link(href="#")
+              .services__icon-w
+                != pugHelpers.Icon.call(locals, {iconName: 'service-2-5', className: 'services__icon'})
+              span.services__text Анализ кода
+          li.services__item
+            a.services__link(href="#")
+              .services__icon-w
+                != pugHelpers.Icon.call(locals, {iconName: 'service-2-6', className: 'services__icon'})
+              span.services__text Социальная инженерия
+          li.services__item
+            a.services__link(href="#")
+              .services__icon-w
+                != pugHelpers.Icon.call(locals, {iconName: 'service-2-7', className: 'services__icon'})
+              span.services__text Анализ уязвимостей ОУД 4

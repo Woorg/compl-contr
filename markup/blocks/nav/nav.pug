@@ -1,2 +1,11 @@
 mixin nav(data)
-    .nav
+  nav.nav.flex&attributes(attributes)
+    ul.nav__list.flex
+      li.nav__item
+        a.nav__link(href="#") Главная
+      li.nav__item
+        a.nav__link(href="#") Услуги
+      li.nav__item
+        a.nav__link(href="#") О компании
+      li.nav__item
+        a.nav__link(href="#") Контакты

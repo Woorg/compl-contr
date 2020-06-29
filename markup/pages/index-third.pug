@@ -1,0 +1,66 @@
+doctype html
+html(class="no-js", lang="ru")
+
+  include ../blocks/head/head.pug
+  include ../blocks/topline/topline.pug
+  include ../blocks/header/header.pug
+  include ../blocks/slider/slider.pug
+  include ../blocks/text/text.pug
+  include ../blocks/services/services.pug
+  include ../blocks/testimonials/testimonials.pug
+  include ../blocks/clients/clients.pug
+  include ../blocks/cta/cta.pug
+  include ../blocks/news/news.pug
+
+
+  include ../blocks/footer/footer.pug
+
+  //- include ../blocks/learn/learn.pug
+  //- include ../blocks/feedback/feedback.pug
+  //- include ../blocks/program/program.pug
+  //- include ../blocks/format/format.pug
+  //- include ../blocks/popup/popup.pug
+
+
+  head
+    +head(head.defaults)
+  body.page
+
+    |%=symbols=%
+    .page__inner
+      +topline()
+      +header()
+      main.main
+        +slider()
+        +text-2-cols()
+        +services()
+        +testimonials()
+        +clients()
+        +cta()
+        +news()
+    .page__bottom
+      +footer()
+      //- +popup()
+
+    //- script(src="//api-maps.yandex.ru/2.1/?apikey=d491e610-d9d0-4022-9b4c-e2d184cf5425&lang=ru_RU")
+    script(src='%=static=%js/separate-js/lazyload.min.js' defer)
+    script(src='%=static=%js/separate-js/jquery.min.js' defer)
+    //- script(src='%=static=%js/separate-js/jquery.magnific-popup.min.js' defer)
+    //- script(src='%=static=%js/separate-js/slick.min.js' defer)
+    script(src='%=static=%js/main%=hash=%%=min=%.js' defer)
+
+    //- script.
+    //-   window.onload = function(){
+    //-     let loc = document.getElementById("1989865eba94e899c7d");
+    //-     loc.value = window.location.href;
+    //-     let ref = document.getElementById("1989865eba94e899c7dref");
+    //-     ref.value = document.referrer;
+    //-   }
+
+    //- script.
+    //-   window.onload = function(){
+    //-     let statUrl = "https://design.viceverso.ru/stat/counter?ref=" + encodeURIComponent(document.referrer)
+    //-       + "&loc=" + encodeURIComponent(document.location.href);
+    //-     document.getElementById('gccounterImgContainer').innerHTML
+    //-       = "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
+    //-   }

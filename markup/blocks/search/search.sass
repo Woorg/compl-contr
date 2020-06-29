@@ -1,1 +1,29 @@
+.search
+  height: 36px
+  &__form
+    overflow: hidden
+  &__input
+    position: relative
+    transform: translateX(0, 0)
+
+  &__submit
+    +resetbutton()
+    +bg($search-icon)
+    text-indent: -9999px
+
+    + &:focus-within
+      .search__input
+        transform: translateX(0, 0)
+
+  &__link
+    display: flex
+    +bg($search-icon)
+    text-indent: -9999px
+    text-decoration: none
+    +tr(.3s ease)
+    &:hover
+      opacity: .8
+      +tr(.3s ease)
+
+
 

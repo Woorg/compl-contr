@@ -1,2 +1,10 @@
-mixin search(data)
-    .search
+//- mixin search(data)
+//-   .search&attributes(attributes)
+//-     form.search__form(action="", method="get")
+//-       input.search__submit(type="submit", value="Поиск")
+//-       input.search__input(type="text", name="s", value="", placeholder="")
+
+
+mixin search-link(data)
+  .search&attributes(attributes)
+    a.search__link(href="#") Поиск

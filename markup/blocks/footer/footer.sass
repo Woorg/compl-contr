@@ -1,48 +1,98 @@
 .footer
+  background-color: #222222
   overflow: hidden
 
   &__container
-    padding-top: 50px
-    padding-bottom: 40px
     flex-wrap: wrap
-    justify-content: space-between
+    color: #8a8a8a
 
-    color: $text-color
+  &__top
+    .footer__container
+      border-bottom: 1px solid #5A5A5A
+      padding-top: 40px
+      padding-bottom: 30px
 
   &__contacts
-    max-width: 233px
-    width: 100%
-    +r($medium)
-      margin-bottom: 30px
+    margin-left: -20px
 
-  &__legal
-    max-width: 170px
-    width: 100%
-  // &__legal-item
+  &__button
+    margin-top: 7px
+    margin-left: 77px
+    padding-right: 46px
+    padding-left: 46px
+    color: #eeeeee
 
-  &__legal-link
-    margin-top: 27px
-    display: inline-block
-    color: #202020
+  &__body
+    .footer__container
+      padding-top: 40px
+      padding-bottom: 40px
+
+  &__body-title
+    margin-bottom: 20px
+    color: #fff
+    font-size: 20px
     font-weight: 500
-    text-decoration: none
-    +tr(color .3s ease)
-    &:hover
-      color: lighten(#303030, 10)
-      +tr(color .3s ease)
+    letter-spacing: 0.2px
+    text-transform: uppercase
 
-.contacts
-  &__title
-    margin-bottom: 30px
-  &__contact
-    font-weight: 900
+  &__navs
+    flex-wrap: wrap
+
+  &__nav
+    margin-right: 60px
+    &:last-child
+      margin-right: 0
+
+  // &__nav-list
+
+  &__nav-item
+    margin-bottom: 20px
+
+  &__nav-link
+    color: #cccccc
+    font-weight: 700
+    text-decoration: none
+    text-transform: uppercase
+
+  &__sub-nav
+    margin-top: 20px
+
+  &__sub-item
+    margin-bottom: 2px
+    padding-left: 2px
+
+  &__sub-link
+    color: #8a8a8a
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: 0.14px
+    text-decoration: none
+    &::before
+      content: '•'
+    &:hover
+      color: darken(#8a8a8a, 10)
+
+
+  &__bottom
+    font-size: 15px
+    font-weight: 400
+    letter-spacing: 0.15px
+    text-transform: uppercase
+    .footer__container
+      border-top: 1px solid #5A5A5A
+      padding-top: 20px
+      padding-bottom: 20px
+
+  &__copyright
+    margin-left: 20px
+
+  &__links
+    margin-left: auto
+
+  &__link
+    margin-left: 10px
     color: inherit
+    text-transform: uppercase
     text-decoration: none
-    +tr(color .3s ease)
-
-    &:hover
-      color: lighten(#303030, 10)
-      +tr(color .3s ease)
-
-
-
+    &:first-child
+      margin-left: 0

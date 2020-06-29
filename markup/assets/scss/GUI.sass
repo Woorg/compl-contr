@@ -12,40 +12,65 @@
   align-items: flex-end
 
 .title
-  color: $title-color
-  font-family: $g
-  font-size: 55px
+  color: #333333
   font-weight: 900
-  +r($medium)
-    font-size: 41px
+  text-align: left
+  font-family: $r
+  font-weight: 700
+  // +r($medium)
+  //   font-size: 41px
+
+.title_biggest
+  font-size: 30px
+  line-height: 1.2
 
 .title_regular
-  color: $title-color-2
-  font-size: 50px
-  +r($medium)
-    font-size: 39px
+  position: relative
+  padding-left: 84px
+  font-size: 19px
+  line-height: 1.2
+  &:before,
+  &:after
+    position: absolute
+    top: 50%
+    left: 0
+    content: ""
+    width: 35px
+    height: 6px
+    transform: translateY(-50%)
+  &:before
+    background-color: #95c81f
+  &:after
+    left: 35px
+    background-color: #0097a4
+
+.title_big
+  font-size: 19px
+  line-height: 1.2
+  text-transform: uppercase
 
 .button
   +resetbutton()
-  padding-top: 18px
-  padding-right: 40px
-  padding-bottom: 21px
-  padding-left: 40px
+  border: 3px solid #95C81F
+  padding-top: 15px
+  padding-right: 60px
+  padding-bottom: 16px
+  padding-left: 60px
+  height: 49px
   display: inline-block
   vertical-align: top
-  background-color: $button-bg
-  color: $button-color
-  font-size: 15px
+  color: #343232
+  font-family: $r
+  font-size: 14px
   font-weight: 500
+  line-height: 1
+  text-align: center
   text-decoration: none
-  border-radius: 10px
-  box-shadow: 0 11px 16px rgba(40, 40, 40, 0.14)
-  +r($medium)
-    padding-bottom: 18px
-    font-size: 14px
+  border-radius: 25px
+  +tr(all .3s ease)
 
   &:hover
-    background-color: darken($button-bg, 05)
+    border: 3px solid darken(#95C81F, 10)
     +tr(all .3s ease)
 
 .button_shine
@@ -115,7 +140,7 @@
       font-size: 24px
       line-height: 1.333
 
-@-webkit-keyframes slideme
+@keyframes slideme
   0%
     left: -30px
     margin-left: 0px
@@ -127,4 +152,3 @@
   100%
       left: 100%
       margin-left: 80px
-

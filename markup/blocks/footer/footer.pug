@@ -1,11 +1,88 @@
 mixin footer(data)
   footer.footer
-    .footer__container.container.flex
-      .footer__contacts.contacts
-        .contacts__title Задать вопросы по курсу можно по номеру:
-        a.contacts__contact(href="tel:+79770009276") +7 (977) 000-92-76
+    .footer__top
+      .footer__container.container.flex
+        .footer__contacts.contacts.contacts_theme_second.flex
+          a.contacts__contact(href="tel:+74991362766")
+            .contacts__text Телефон
+            != pugHelpers.Icon.call(locals, {iconName: 'phone-icon', className: 'contacts__icon'})
+            | +7 499 136 2766
+          a.contacts__contact(href="mailto:sales@website.ru")
+            .contacts__text E-mail
+            != pugHelpers.Icon.call(locals, {iconName: 'mail-icon', className: 'contacts__icon'})
+            | info@compliance-control.ru
+          span.contacts__contact
+            .contacts__text Адрес
+            != pugHelpers.Icon.call(locals, {iconName: 'map-icon', className: 'contacts__icon'})
+            | 143600, Московская обл., г. Волоколамск, <br/>ул. Революционная, д.3, оф.306
 
-      .footer__legal
-        .footer__legal-item ИП Райков Е.И.
-        .footer__legal-item ИНН: 772411966461
-        a.footer__legal-link(href="#link") Договор-оферта
+        a.footer__button.button(href="#") Обратный звонок
+
+    .footer__body
+      .footer__container.container
+        .footer__body-title Услуги
+        .footer__navs.flex
+          nav.footer__nav
+            ul.footer__nav-list
+              li.footer__nav-item
+                a.footer__nav-link(href="") Консалтинг и сертификация
+                ul.footer__sub-nav
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") PCI DSS
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") PCI PIN Security
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") PA-DSS
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") PCI 3DS Security Requirements
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") PCI Card Production
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") Положения Банка России 382-П и 672-П
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") Положение Банка России 683-П и 684-П
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") SWIFT CSP
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") ГОСТ-Р 57580.1
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") ISO 27001
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") GDPR
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") Федеральный Закон №152 «О персональных данных»
+
+          nav.footer__nav
+            ul.footer__nav-list
+              li.footer__nav-item
+                a.footer__nav-link(href="") Анализ защищенности
+                ul.footer__sub-nav
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") Тестирование на проникновение
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") Тестирование безопасности WEB-сервисов
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") Тестирование систем ДБО
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") Оценка безопасности мобильных приложений
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") Социальная инженерия
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") Анализ исходного кода
+                  li.footer__sub-item
+                    a.footer__sub-link(href="") Анализ уязвимостей ОУД 4
+
+          nav.footer__nav
+            ul.footer__nav-list
+              li.footer__nav-item
+                a.footer__nav-link(href="") О компании
+              li.footer__nav-item
+                a.footer__nav-link(href="") Контакты
+
+
+    .footer__bottom
+      .footer__container.container.flex
+        small.footer__copyright &copy; 2012-2020 Compliance control ltd. - при цитировании ссылка на сайт обязательна
+        .footer__links
+          a.footer__link(href="#") sitemap
+          a.footer__link(href="#") свяжитесь с нами

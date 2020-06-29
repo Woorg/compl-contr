@@ -1,0 +1,26 @@
+mixin news(data)
+  section.news
+    .news__container.container
+      h2.news__title.title.title_regular Новости
+      .news__articles.flex
+        article.news__article.article.flex
+          a.article__image(href="#")
+            img(src="assets/images/content/news-1.png", alt="")
+          .article__entry
+            h3.article__title
+              a.article__link(href="#") Заголовок новости
+            .article__meta
+              time.article__date(datetime="24.03.2020") 24.03.2020
+            .article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntLorem ipsum dolor sit amet, consectetur adipiscing
+            a.article__more(href="#") Читать далее &gt;&gt;
+
+        article.news__article.article.flex
+          a.article__image(href="#")
+            img(src="assets/images/content/news-2.png", alt="")
+          .article__entry
+            h3.article__title
+              a.article__link(href="#") Заголовок новости
+            .article__meta
+              time.article__date(datetime="24.03.2020") 24.03.2020
+            .article__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            a.article__more(href="#") Читать далее &gt;&gt;

@@ -1,0 +1,32 @@
+.topline
+  border-bottom: 1px solid #f3f3f3
+  &__container
+    padding-top: 10px
+    padding-bottom: 12px
+
+  &__contacts
+    margin-left: -20px
+
+
+  &__contact
+    position: relative
+    margin-left: 20px
+    padding-left: 20px
+    color: #606060
+    font-family: $r
+    font-size: 13px
+    font-weight: 400
+    letter-spacing: -0.03px
+    text-decoration: none
+    +tr(.3s ease)
+    &:hover
+      color: lighten(#606060, 10)
+      +tr(.3s ease)
+
+  &__contact-icon
+    position: absolute
+    top: 50%
+    left: 0
+    color: #0097a4
+    fill: #0097a4
+    transform: translateY(-50%)

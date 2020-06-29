@@ -1,0 +1,112 @@
+.slider
+  &__container
+    position: relative
+
+  &__items
+    height: 420px
+  &__item
+    height: 100%
+
+  &__item_1
+    padding-top: 70px
+    padding-right: 103px
+    .slider__entry
+      margin-left: auto
+    .slider__list
+      margin-left: 5px
+
+  &__item_2
+    padding-top: 107px
+    padding-left: 84px
+    .slider__entry
+      margin-right: auto
+    .slider__title
+      margin-bottom: 10px
+    .slider__button
+      margin-top: 22px
+
+
+  &__item_3
+    padding-top: 102px
+    padding-right: 82px
+    .slider__entry
+      margin-left: auto
+    .slider__button
+      margin-top: 30px
+
+  &__entry
+    max-width: 420px
+    color: #4d4d4d
+
+  &__title
+    margin-bottom: 28px
+    color: #333333
+
+  &__text
+
+    color: #4d4d4d
+    font-size: 14px
+    font-weight: 500
+    letter-spacing: 0.14px
+    line-height: 1.214
+
+
+  // &__list
+
+  &__list_half
+    flex-wrap: wrap
+    .slider__list-item
+      max-width: 47%
+      width: 100%
+
+  &__list-item
+    position: relative
+    margin-bottom: 17px
+    padding-left: 38px
+    font-weight: 500
+    letter-spacing: 0.14px
+    &:last-child
+      margin-bottom: 0
+
+  &__list-item_3
+    margin-top: -5px
+    .slider__list-icon
+      +bg($slider-icon-1)
+
+  &__list-icon
+    position: absolute
+    top: calc(50% - 2px)
+    left: 0
+    transform: translateY(-50%)
+    color: #0097a4
+    fill: #0097a4
+
+  &__button
+    margin-top: 42px
+
+  .tns-outer
+    position: relative
+    .tns-nav
+      position: absolute
+      bottom: 22px
+      left: 0
+      right: 0
+      text-align: center
+
+      button
+        +resetbutton()
+        margin-right: 7px
+        width: 10px
+        height: 10px
+        background-color: #c9c9c9
+        border-radius: 50%
+        +tr(.3s ease)
+
+        &.tns-nav-active
+          background-color: #0097a4
+        &:last-child
+          margin-right: 0
+
+        &:hover
+          background-color: #0097a4
+          +tr(.3s ease)

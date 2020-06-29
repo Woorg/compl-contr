@@ -1,4 +1,5 @@
 import svg4everybody from 'svg4everybody';
+import {tns} from "tiny-slider/src/tiny-slider"
 // import exhibitionSlider from '../../blocks/exhibition/exhibition';
 // import aboutSlider from '../../blocks/about/about';
 // import featuredSlider from '../../blocks/featured/featured';
@@ -50,49 +51,65 @@ import svg4everybody from 'svg4everybody';
 
   $(function() {
 
-    // Video
+    // Main slider
 
-    $('.video__prev').on( 'click', function(e) {
-
-      //отменяем стандартное действие button
-      e.preventDefault();
-      var poster = $(this);
-      // ищем родителя ближайшего по классу
-      var wrapper = poster.closest('.video__object');
-      videoPlay(wrapper);
-
+    const slider = tns({
+      container: '.slider__items',
+      autoHeight: true,
+      items: 1,
+      // autoplay: true,
+      speed: 300,
+      mouseDrag: true,
+      nav: true,
+      // navAsThumbnails: true,
+      controls: false,
+      autoplayButton: false,
+      autoplayButtonOutput: false,
+      navPosition: 'bottom',
     });
 
-    //вопроизводим видео, при этом скрывая постер
-    function videoPlay(wrapper) {
-      var iframe = wrapper.find('.video__iframe');
-      // Берем ссылку видео из data
-      var src = iframe.data('src');
-      // скрываем постер
-      wrapper.addClass('video__object_active');
-      // подставляем в src параметр из data
-      iframe.attr('src',src);
-    }
 
+    // Testimonials
 
-    // Modules
-
-    const modulesWrapLimited = 'program__w_limited',
-          $modulesWrap = $('.program__w'),
-          $modulesButton = $('.program__more');
-
-    $modulesButton.on( 'click', function(e) {
-      $modulesWrap.toggleClass(modulesWrapLimited);
+    const testimonialsSlider = tns({
+      container: '.testimonials__slider',
+      autoHeight: true,
+      items: 2,
+      // autoplay: true,
+      speed: 300,
+      mouseDrag: true,
+      nav: true,
+      // navAsThumbnails: true,
+      controls: false,
+      autoplayButton: false,
+      autoplayButtonOutput: false,
+      navPosition: 'bottom',
     });
 
+
+    // Slients
+
+    const clientsSlider = tns({
+      container: '.clients__slider',
+      autoHeight: true,
+      items: 6,
+      // autoplay: true,
+      speed: 300,
+      mouseDrag: true,
+      nav: true,
+      // navAsThumbnails: true,
+      controls: false,
+      autoplayButton: false,
+      autoplayButtonOutput: false,
+      navPosition: 'bottom',
+    });
 
 
     // Popup
 
-    $('.open-popup').magnificPopup({
-      type: 'inline',
-      // preloader: false,
-    });
+    // $('.open-popup').magnificPopup({
+      // type: 'inline',
+    // });
 
     // let $hButton = $('.h-user__button');
     // let $hList = $('.h-user__list');
@@ -186,9 +203,10 @@ import svg4everybody from 'svg4everybody';
 
     pageWidget([
       'index',
-      'buy-ticket',
-      'enter',
-      'personal',
+      'index-second',
+      'index-third',
+      // 'enter',
+      // 'personal',
 
     ]);
 
